@@ -1,0 +1,27 @@
+ALTER TABLE tanulok
+ADD COLUMN OSZTALYZAT int NOT NULL DEFAULT 3
+AFTER OSZTONDIJ
+
+ALTER TABLE tanulok
+DROP COLUMN OSZTALYZAT
+
+-- Tábla törlése
+DROP TABLE tablenev
+
+--Adatok törlése a táblából
+TRUNCATE TABLE tablanev
+
+--Sor törlés
+DELETE FROM tablanev 
+WHERE feltétel
+
+SELECT * FROM tanulok
+WHERE TKOD = 'T123'
+--
+DELETE FROM tanulok WHERE TKOD = 'T123'
+
+SELECT OSZTALYZAT FROM tanulok
+UPDATE tanulok SET OSZTALYZAT = 5
+
+UPDATE tanulok SET OSZTALYZAT = 4
+WHERE TNEV = 'Kiss Virág'
